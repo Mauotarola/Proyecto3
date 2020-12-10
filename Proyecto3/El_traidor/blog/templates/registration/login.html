@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Inicio seccion</title>
+</head>
+<body>
+    {% load crispy_forms_tags %}
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Ingresa tu usuario</h2>
+                        <hr>
+                        <form action="" method="post">
+
+                            {% csrf_token %}
+                            {{ form | crispy }}
+                            <a href="{% url 'home' %}">Ir al menu</a>
+                            <input type="submit" value="ingresar" class="btn btn-success float-center">
+
+                        </form>
+                        <a href="{% url 'social:begin' 'facebook' %}">Login con facebook</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

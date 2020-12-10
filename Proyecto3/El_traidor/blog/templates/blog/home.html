@@ -1,0 +1,83 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block css%}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">     
+{% endblock %}
+
+{% block contenido %}
+<section class="team contenedor" id="equipo">
+    <h3>Nuestras variedades</h3>
+    <p class="after">La comida mueve al mundo</p>
+    <div class="card">
+        <div class="content-card">
+            <div class="secciones">
+                <a href="{% url 'desayuno' %}"><img src="media/Galerias/desayuno.jpg" alt=""></a>
+            </div>
+            <div class="texto-team">
+                <h4>Desayuno</h4>
+                <p>Panqueques, sandwich, tostadas, etc. </p>
+            </div>
+        </div>
+        <div class="content-card">
+            <div class="secciones">
+                <a href="{% url 'almuerzo' %}"><img src="media/Galerias/sapshui.jpeg" alt=""></a>
+            </div>
+            <div class="texto-team">
+                <h4>Almuerzo</h4>
+                <p>Carnes, pastas, vegetables, etc.</p>
+            </div>
+        </div>
+        <div class="content-card">
+            <div class="secciones">
+                <a href="postre.html"><img src="media/Galerias/postre.jpg" alt=""></a>
+            </div>
+            <div class="texto-team">
+                <h4>Postres</h4>
+                <p>Helados, pasteles, conservas, etc.</p>
+            </div>
+        </div>
+        <div class="content-card">
+            <div class="secciones">
+                <a href="{% url 'cena' %}"><img src="media/Galerias/cena.jpg" alt=""></a>
+            </div>
+            <div class="texto-team">
+                <h4>Cena</h4>
+                <p>Ensaladas, panesillos, hamburgesas, etc. </p>
+            </div>
+        </div>
+        <div class="content-card">
+            <div class="secciones">
+                <a href="reposteria.html"><img src="media/Galerias/reposta.jpg" alt=""></a>
+            </div>
+            <div class="texto-team">
+                <h4>Reposteria</h4>
+                <p>Galletas, tortas, kuchen, etc.</p>
+            </div>                   
+        </div>
+        <div class="content-card">
+            <div class="secciones">
+                <a href="banqueteria.html"><img src="media/Galerias/banqueteria.jpg" alt=""></a>
+            </div>
+            <div class="texto-team">
+                <h4>Banqueteria</h4>
+                <p>Empanadas, cocteles, bollitos, etc.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="carrsel contenedor" id="equipo">
+    <h3>Algunas de nuestras resetas</h3>
+    <div class="carta">
+        <dic class="slider">
+            <ul>
+                <li><img src="media/Galerias/carusel1.jpg"></li>
+                <li><img src="media/Galerias/carusel2.jpg"></li>
+                <li><img src="media/Galerias/carusel3.jpg"></li>
+                <li><img src="media/Galerias/carusel4.jpg"></li>
+                <li><img src="media/Galerias/carusel5.jpg"></li>
+            </ul>
+         </dic>
+    </div>
+</section>    
+{% endblock %}
